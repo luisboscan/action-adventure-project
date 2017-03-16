@@ -261,4 +261,9 @@ public class CharacterMovement : MonoBehaviour {
     {
         currentSpeed.Set(x, y, z);
     }
+
+    public bool IsMoving
+    {
+        get { return currentSpeed.x != 0 || currentSpeed.z != 0; }
+    }
 }

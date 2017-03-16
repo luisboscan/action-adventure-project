@@ -7,6 +7,7 @@ public class JumpingActionStateBehaviour : StateBehaviour<ActionStates>
 {
     public CharacterMovement characterMovement;
     public ActionStateMachine stateMachine;
+    public Animator animator;
 
     public override ActionStates GetState()
     {

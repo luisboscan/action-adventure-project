@@ -60,10 +60,13 @@ public class TargetTriggerArea : MonoBehaviour
     /// </summary>
     private bool IsTargetInCameraLineOfSight(GameObject target)
     {
+        return true;
+        /*
         Ray ray = new Ray(cameraComponent.transform.position, target.transform.position - cameraComponent.transform.position);
         RaycastHit raycastHit;
         bool hit = Physics.Raycast(ray, out raycastHit);
         return hit && raycastHit.collider.gameObject == target;
+        */
     }
 
     private GameObject GetTargetClosestToCameraCenter(List<GameObject> targets)

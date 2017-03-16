@@ -33,6 +33,7 @@ public class TargetingCameraStateBehaviour : StateBehaviour<CameraStates>
     {
         stateMachine.targetingCameraController.UpdateCameraState(playerInput.rotation);
         player.transform.LookAt(stateMachine.targetingCameraController.Target.transform);
+        player.transform.rotation = Quaternion.Euler(0, player.transform.rotation.y, 0);
     }
 
     public override bool CanEnterState()
